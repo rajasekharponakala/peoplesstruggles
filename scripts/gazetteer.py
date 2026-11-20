@@ -1,0 +1,121 @@
+"""Curated places mentioned in the book, with approximate modern coordinates.
+
+`aliases` are the spellings that occur in the 1972 text (it is inconsistent:
+Illendu/Yellandu, Manukota/Mahabubabad, Bezwada/Vijayawada …).
+`hd` is the historical district the book places it in.
+type: city | town | village | forest | jail
+"""
+
+PLACES = [
+    # ---- Nalgonda district (the heart of the struggle)
+    ("nalgonda", "Nalgonda", ["Nalgonda"], 17.057, 79.267, "town", "Nalgonda"),
+    ("suryapet", "Suryapet", ["Suryapet", "Suryapeta", "Patasuryapet"], 17.140, 79.620, "town", "Nalgonda"),
+    ("huzurnagar", "Huzurnagar", ["Huzurnagar"], 16.896, 79.873, "town", "Nalgonda"),
+    ("miryalagudem", "Miryalagudem", ["Miryalagudem", "Miryalaguda"], 16.873, 79.563, "town", "Nalgonda"),
+    ("devarkonda", "Devarkonda", ["Devarkonda", "Devarakonda"], 16.692, 78.921, "town", "Nalgonda"),
+    ("bhongir", "Bhongir (Bhuvanagiri)", ["Bhongir", "Bhuvanagiri", "Bhuvangiri"], 17.511, 78.889, "town", "Nalgonda"),
+    ("ramannapeta", "Ramannapeta", ["Ramannapeta", "Ramannapet"], 17.290, 79.087, "town", "Nalgonda"),
+    ("kodad", "Kodad", ["Kodad", "Kodada"], 16.998, 79.966, "town", "Nalgonda"),
+    ("munagala", "Munagala", ["Munagala"], 17.054, 79.824, "village", "Nalgonda"),
+    ("tungaturthi", "Tungaturthi", ["Tungaturthi", "Tungathurthi", "Tungaturti"], 17.430, 79.565, "village", "Nalgonda"),
+    ("tirumalagiri", "Tirumalagiri", ["Tirumalagiri", "Thirumalagiri"], 17.444, 79.684, "village", "Nalgonda"),
+    ("aleru", "Aleru", ["Aleru", "Alair"], 17.648, 79.053, "village", "Nalgonda"),
+    ("kolanupaka", "Kolanupaka", ["Kolanupaka", "Kolanupoka"], 17.693, 79.047, "village", "Nalgonda"),
+    ("nakrekal", "Nakrekal", ["Nakrekal"], 17.165, 79.428, "village", "Nalgonda"),
+    ("chityal", "Chityal", ["Chityal", "Chityala"], 17.233, 79.131, "village", "Nalgonda"),
+    ("mothkur", "Mothkur", ["Mothkur", "Motkur"], 17.450, 79.259, "village", "Nalgonda"),
+    ("ibrahimpatnam", "Ibrahimpatnam", ["Ibrahimpatnam"], 17.192, 78.651, "town", "Hyderabad"),
+    # ---- Jangaon / Warangal
+    ("jangaon", "Jangaon", ["Jangaon", "Janagaon", "Jangoan"], 17.724, 79.152, "town", "Warangal"),
+    ("kadavendi", "Kadavendi", ["Kadavendi", "Kadivendi"], 17.689, 79.374, "village", "Warangal"),
+    ("devaruppula", "Devaruppula", ["Devaruppula"], 17.689, 79.338, "village", "Warangal"),
+    ("palakurthi", "Palakurthi", ["Palakurthi", "Palakurti"], 17.660, 79.433, "village", "Warangal"),
+    ("visnur", "Visnur", ["Visnur", "Visnoor", "Visunur"], 17.705, 79.405, "village", "Warangal"),
+    ("warangal", "Warangal", ["Warangal"], 17.968, 79.594, "city", "Warangal"),
+    ("hanamkonda", "Hanamkonda", ["Hanamkonda", "Hanumakonda"], 18.006, 79.558, "town", "Warangal"),
+    ("manukota", "Manukota (Mahabubabad)", ["Manukota", "Mahabubabad"], 17.598, 80.001, "town", "Warangal"),
+    ("narsampet", "Narsampet", ["Narsampet", "Narsampeta"], 17.928, 79.894, "town", "Warangal"),
+    ("mulugu", "Mulugu", ["Mulugu", "Mulug"], 18.191, 79.943, "town", "Warangal"),
+    ("pakhal", "Pakhal", ["Pakhal", "Pakhala"], 17.950, 80.010, "forest", "Warangal"),
+    ("torrur", "Thorrur", ["Torruru", "Thorrur", "Torrur"], 17.587, 79.674, "village", "Warangal"),
+    ("garla", "Garla", ["Garla"], 17.497, 80.143, "village", "Warangal"),
+    ("dornakal", "Dornakal", ["Dornakal"], 17.443, 80.152, "town", "Warangal"),
+    ("eturnagaram", "Eturnagaram", ["Eturnagaram"], 18.335, 80.427, "forest", "Warangal"),
+    # ---- Khammam / Godavari forest
+    ("khammam", "Khammam", ["Khammam"], 17.247, 80.151, "town", "Khammam"),
+    ("madhira", "Madhira", ["Madhira"], 16.918, 80.368, "town", "Khammam"),
+    ("illendu", "Illendu (Yellandu)", ["Illendu", "Yellandu", "lllendu"], 17.599, 80.331, "town", "Khammam"),
+    ("kothagudem", "Kothagudem", ["Kothagudem"], 17.551, 80.619, "town", "Khammam"),
+    ("palvancha", "Palvancha", ["Palvancha", "Paloncha"], 17.599, 80.676, "town", "Khammam"),
+    ("bhadrachalam", "Bhadrachalam", ["Bhadrachalam"], 17.669, 80.893, "town", "Khammam"),
+    ("wyra", "Wyra", ["Wyra"], 17.192, 80.355, "village", "Khammam"),
+    ("gundala", "Gundala", ["Gundala"], 17.870, 80.330, "forest", "Khammam"),
+    ("allapalli", "Allapalli", ["Allapalli"], 17.900, 80.420, "forest", "Khammam"),
+    ("godavari-forest", "Godavari forest belt", ["Godavari forest", "Godavari Forest"], 18.050, 80.550, "forest", "Khammam"),
+    # ---- Karimnagar
+    ("karimnagar", "Karimnagar", ["Karimnagar"], 18.438, 79.128, "town", "Karimnagar"),
+    ("huzurabad", "Huzurabad", ["Huzurabad"], 18.200, 79.417, "town", "Karimnagar"),
+    ("sircilla", "Sircilla", ["Sircilla", "Siricilla"], 18.387, 78.811, "town", "Karimnagar"),
+    ("jagtial", "Jagtial", ["Jagtial", "Jagityal"], 18.794, 78.916, "town", "Karimnagar"),
+    ("manthani", "Manthani", ["Manthena", "Manthani"], 18.651, 79.666, "town", "Karimnagar"),
+    ("husnabad", "Husnabad", ["Husnabad"], 18.106, 79.209, "village", "Karimnagar"),
+    ("peddapalli", "Peddapalli", ["Peddapalli"], 18.615, 79.374, "town", "Karimnagar"),
+    # ---- Adilabad
+    ("adilabad", "Adilabad", ["Adilabad"], 19.664, 78.532, "town", "Adilabad"),
+    ("chennur", "Chennur", ["Chennur"], 18.832, 79.787, "town", "Adilabad"),
+    ("sirpur", "Sirpur", ["Sirpur", "Siripur"], 19.480, 79.590, "town", "Adilabad"),
+    ("bellampalli", "Bellampalli", ["Bellampalli"], 19.058, 79.493, "town", "Adilabad"),
+    # ---- Medak / Nizamabad / Hyderabad
+    ("hyderabad", "Hyderabad", ["Hyderabad city", "Hyderabad City", "Secunderabad"], 17.385, 78.486, "city", "Hyderabad"),
+    ("vikarabad", "Vikarabad", ["Vikarabad"], 17.338, 77.905, "town", "Hyderabad"),
+    ("medak", "Medak", ["Medak"], 18.046, 78.262, "town", "Medak"),
+    ("siddipet", "Siddipet", ["Siddipet"], 18.102, 78.852, "town", "Medak"),
+    ("jogipet", "Jogipet", ["Jogipet", "Jogipeta"], 17.835, 78.065, "town", "Medak"),
+    ("nizamabad", "Nizamabad", ["Nizamabad"], 18.672, 78.094, "town", "Nizamabad"),
+    # ---- Mahbubnagar / Krishna (Nallamala) forest
+    ("mahbubnagar", "Mahbubnagar", ["Mahbubnagar", "Mahboobnagar", "Mahabubnagar"], 16.737, 78.008, "town", "Mahbubnagar"),
+    ("amarabad", "Amarabad", ["Amarabad", "Amrabad"], 16.383, 78.833, "forest", "Mahbubnagar"),
+    ("achampet", "Achampet", ["Achampet", "Acchampeta", "Achampeta"], 16.630, 78.600, "town", "Mahbubnagar"),
+    ("kalvakurthy", "Kalvakurthy", ["Kalvakurti", "Kalvakurthy"], 16.670, 78.500, "town", "Mahbubnagar"),
+    ("nagarkurnool", "Nagarkurnool", ["Nagarkurnool"], 16.480, 78.310, "town", "Mahbubnagar"),
+    ("nallamala", "Nallamala forest", ["Nallamala", "Nallamalai"], 16.150, 78.750, "forest", "Mahbubnagar"),
+    # ---- Andhra (the 'rear')
+    ("vijayawada", "Vijayawada (Bezwada)", ["Vijayawada", "Bezwada"], 16.506, 80.648, "city", "Krishna"),
+    ("guntur", "Guntur", ["Guntur"], 16.306, 80.436, "city", "Guntur"),
+    ("tenali", "Tenali", ["Tenali"], 16.243, 80.640, "town", "Guntur"),
+    ("bapatla", "Bapatla", ["Bapatla"], 15.904, 80.467, "town", "Guntur"),
+    ("narasaraopet", "Narasaraopet", ["Narsaraopeta", "Narasaraopet"], 16.234, 80.049, "town", "Guntur"),
+    ("sattenapalli", "Sattenapalli", ["Sattenapalli"], 16.394, 80.152, "town", "Guntur"),
+    ("repalle", "Repalle", ["Repalli", "Repalle"], 16.018, 80.829, "town", "Guntur"),
+    ("eluru", "Eluru (Ellore)", ["Eluru", "Ellore"], 16.711, 81.095, "town", "West Godavari"),
+    ("bhimavaram", "Bhimavaram", ["Bhimavaram"], 16.544, 81.521, "town", "West Godavari"),
+    ("rajahmundry", "Rajahmundry", ["Rajahmundry"], 17.000, 81.804, "city", "East Godavari"),
+    ("razole", "Razole", ["Razole", "Razolu"], 16.473, 81.839, "town", "East Godavari"),
+    ("yanam", "Yanam", ["Yanam"], 16.733, 82.213, "town", "East Godavari"),
+    ("machilipatnam", "Machilipatnam (Bandar)", ["Masulipatam", "Bandar", "Machilipatnam"], 16.187, 81.138, "town", "Krishna"),
+    ("gudivada", "Gudivada", ["Gudivada"], 16.435, 80.993, "town", "Krishna"),
+    ("gannavaram", "Gannavaram", ["Gannavaram"], 16.541, 80.802, "town", "Krishna"),
+    ("divi", "Divi taluka", ["Divi"], 16.021, 80.917, "town", "Krishna"),
+    ("nandigama", "Nandigama", ["Nandigama"], 16.776, 80.286, "town", "Krishna"),
+    ("kurnool", "Kurnool", ["Kurnool"], 15.828, 78.037, "city", "Kurnool"),
+    ("ongole", "Ongole", ["Ongole"], 15.503, 80.044, "town", "Ongole"),
+    ("cuddapah", "Cuddapah", ["Cuddapah"], 14.467, 78.824, "town", "Cuddapah"),
+    # ---- jails far away
+    ("gulbarga", "Gulbarga jail", ["Gulbarga"], 17.329, 76.834, "jail", "Gulbarga"),
+    ("jalna", "Jalna jail", ["Jalna"], 19.841, 75.886, "jail", "Aurangabad"),
+]
+
+# Modern district (geojson `district`) -> historical district used by the book
+MODERN_TO_HISTORIC = {
+    "Nalgonda": "Nalgonda", "Suryapet": "Nalgonda", "Yadadri Bhuvanagiri": "Nalgonda",
+    "Warangal Urban": "Warangal", "Warangal Rural": "Warangal", "Jangaon": "Warangal",
+    "Mahabubabad": "Warangal", "Jayashankar Bhupalapally": "Warangal", "Mulugu": "Warangal",
+    "Khammam": "Khammam", "Bhadradri Kothagudem": "Khammam",
+    "Karimnagar": "Karimnagar", "Jagtial": "Karimnagar", "Peddapalli": "Karimnagar", "Rajanna Sircilla": "Karimnagar",
+    "Adilabad": "Adilabad", "Komaram Bheem": "Adilabad", "Mancherial": "Adilabad", "Nirmal": "Adilabad",
+    "Nizamabad": "Nizamabad", "Kamareddy": "Nizamabad",
+    "Medak": "Medak", "Sangareddy": "Medak", "Siddipet": "Medak",
+    "Mahabubnagar": "Mahbubnagar", "Nagarkurnool": "Mahbubnagar", "Wanaparthy": "Mahbubnagar",
+    "Jogulamba Gadwal": "Mahbubnagar", "Narayanpet": "Mahbubnagar",
+    "Hyderabad": "Hyderabad", "Ranga Reddy": "Hyderabad", "Medchal Malkajgiri": "Hyderabad", "Vikarabad": "Hyderabad",
+}

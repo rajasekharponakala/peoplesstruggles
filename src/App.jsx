@@ -1,64 +1,64 @@
-import { BrowserRouter, Routes, Route, NavLink, useLocation } from "react-router-dom";
-import Home from "./pages/Home";
-import Read from "./pages/Read";
-import Chapter from "./pages/Chapter";
-import MapPage from "./pages/MapPage";
-import Martyrs from "./pages/Martyrs";
-import Names from "./pages/Names";
-import SearchPage from "./pages/SearchPage";
-import Timeline from "./pages/Timeline";
-import Witness from "./pages/Witness";
-import "./index.css";
+import { lazy, Suspense, useEffect } from "react";
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from "react-router-dom";
+import { Footer, Header, Loading } from "./components/Layout";
 
-const NAV = [
-  { to: "/", label: "Home" },
-  { to: "/read", label: "Read" },
-  { to: "/map", label: "Map" },
-  { to: "/martyrs", label: "Martyrs" },
-  { to: "/witness", label: "Witness" },
-  { to: "/names", label: "Names & Places" },
-  { to: "/timeline", label: "Timeline" },
-  { to: "/search", label: "Search" },
-];
+const Home = lazy(() => import("./pages/Home"));
+const Library = lazy(() => import("./pages/Library"));
+const Reader = lazy(() => import("./pages/Reader"));
+const Timeline = lazy(() => import("./pages/Timeline"));
+const Atlas = lazy(() => import("./pages/Atlas"));
+const Martyrs = lazy(() => import("./pages/Martyrs"));
+const People = lazy(() => import("./pages/People"));
+const Witness = lazy(() => import("./pages/Witness"));
+const Insights = lazy(() => import("./pages/Insights"));
+const Glossary = lazy(() => import("./pages/Glossary"));
+const SearchPage = lazy(() => import("./pages/SearchPage"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
-function Navbar() {
-  const loc = useLocation();
+function ScrollToTop() {
+  const { pathname, search } = useLocation();
+  useEffect(() => {
+    if (!/[?&]b=/.test(search)) window.scrollTo(0, 0);
+  }, [pathname]); // eslint-disable-line react-hooks/exhaustive-deps
+  return null;
+}
+
+function Shell() {
+  const { pathname } = useLocation();
+  const full = pathname.startsWith("/map");
   return (
-    <nav className="navbar">
-      <div className="brand"><span className="flame">🔥</span> Telangana Struggle</div>
-      <div className="nav-links">
-        {NAV.map((n) => (
-          <NavLink key={n.to} to={n.to} className={({ isActive }) => (isActive ? "active" : "")}>
-            {n.label}
-          </NavLink>
-        ))}
-      </div>
-    </nav>
+    <div className="shell">
+      <a href="#main" className="sr-only">Skip to content</a>
+      <Header />
+      <main id="main">
+        <Suspense fallback={<Loading />}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/read" element={<Library />} />
+            <Route path="/read/:id" element={<Reader />} />
+            <Route path="/timeline" element={<Timeline />} />
+            <Route path="/map" element={<Atlas />} />
+            <Route path="/martyrs" element={<Martyrs />} />
+            <Route path="/people" element={<People />} />
+            <Route path="/witness" element={<Witness />} />
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/glossary" element={<Glossary />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/names" element={<Navigate to="/search?tab=index" replace />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </main>
+      {!full && <Footer />}
+    </div>
   );
 }
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <div className="app-shell">
-        <Navbar />
-        <main style={{ flex: 1 }}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/read" element={<Read />} />
-            <Route path="/read/:id" element={<Chapter />} />
-            <Route path="/map" element={<MapPage />} />
-            <Route path="/martyrs" element={<Martyrs />} />
-            <Route path="/witness" element={<Witness />} />
-            <Route path="/names" element={<Names />} />
-            <Route path="/timeline" element={<Timeline />} />
-            <Route path="/search" element={<SearchPage />} />
-          </Routes>
-        </main>
-        <footer className="footer">
-          Based on "Telangana People's Struggle and Its Lessons" by P. Sundarayya (1972). Built as an interactive archive.
-        </footer>
-      </div>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, "")}>
+      <ScrollToTop />
+      <Shell />
     </BrowserRouter>
   );
 }
