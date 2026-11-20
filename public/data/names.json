@@ -1,0 +1,562 @@
+[
+ {
+  "name": "Nalgonda",
+  "freq": 59
+ },
+ {
+  "name": "Warangal",
+  "freq": 47
+ },
+ {
+  "name": "Khammam",
+  "freq": 45
+ },
+ {
+  "name": "Bhongir",
+  "freq": 29
+ },
+ {
+  "name": "Karimnagar",
+  "freq": 27
+ },
+ {
+  "name": "Guntur",
+  "freq": 22
+ },
+ {
+  "name": "Palvancha",
+  "freq": 22
+ },
+ {
+  "name": "Godavari",
+  "freq": 21
+ },
+ {
+  "name": "Illendu",
+  "freq": 21
+ },
+ {
+  "name": "Munagala",
+  "freq": 21
+ },
+ {
+  "name": "Madhira",
+  "freq": 20
+ },
+ {
+  "name": "Kothagudem",
+  "freq": 18
+ },
+ {
+  "name": "Adilabad",
+  "freq": 17
+ },
+ {
+  "name": "Bhuvanagiri",
+  "freq": 15
+ },
+ {
+  "name": "Bezwada",
+  "freq": 14
+ },
+ {
+  "name": "Kumarayya",
+  "freq": 14
+ },
+ {
+  "name": "Pindiprolu",
+  "freq": 14
+ },
+ {
+  "name": "Vishalandhra",
+  "freq": 14
+ },
+ {
+  "name": "CPSU",
+  "freq": 13
+ },
+ {
+  "name": "Amarabad",
+  "freq": 12
+ },
+ {
+  "name": "Errapadu",
+  "freq": 12
+ },
+ {
+  "name": "Narsampeta",
+  "freq": 12
+ },
+ {
+  "name": "Gannavaram",
+  "freq": 11
+ },
+ {
+  "name": "Sri Ravi Narayan Reddy",
+  "freq": 11
+ },
+ {
+  "name": "Devarkonda",
+  "freq": 10
+ },
+ {
+  "name": "Manthena",
+  "freq": 10
+ },
+ {
+  "name": "Ramulu",
+  "freq": 10
+ },
+ {
+  "name": "Ravi Narayan Reddy",
+  "freq": 10
+ },
+ {
+  "name": "Tadakamalla",
+  "freq": 10
+ },
+ {
+  "name": "Vikarabad",
+  "freq": 10
+ },
+ {
+  "name": "East Godavari",
+  "freq": 9
+ },
+ {
+  "name": "Kotapadu",
+  "freq": 9
+ },
+ {
+  "name": "Krishna River",
+  "freq": 9
+ },
+ {
+  "name": "Kurnool",
+  "freq": 9
+ },
+ {
+  "name": "Narsampet",
+  "freq": 9
+ },
+ {
+  "name": "Russian",
+  "freq": 9
+ },
+ {
+  "name": "Secretariat",
+  "freq": 9
+ },
+ {
+  "name": "Vijayanagaram",
+  "freq": 9
+ },
+ {
+  "name": "Ajoy Kumar Ghosh",
+  "freq": 8
+ },
+ {
+  "name": "Communist Party Zindabad",
+  "freq": 8
+ },
+ {
+  "name": "West Godavari",
+  "freq": 8
+ },
+ {
+  "name": "Baburao",
+  "freq": 7
+ },
+ {
+  "name": "Balemula",
+  "freq": 7
+ },
+ {
+  "name": "Comrade Rami Reddy",
+  "freq": 7
+ },
+ {
+  "name": "Devarakonda",
+  "freq": 7
+ },
+ {
+  "name": "Kandagatla",
+  "freq": 7
+ },
+ {
+  "name": "Maharashtra",
+  "freq": 7
+ },
+ {
+  "name": "Rachakonda",
+  "freq": 7
+ },
+ {
+  "name": "Ramachandra Reddy",
+  "freq": 7
+ },
+ {
+  "name": "Ramannapet",
+  "freq": 7
+ },
+ {
+  "name": "River Godavari",
+  "freq": 7
+ },
+ {
+  "name": "Ailamma’s",
+  "freq": 6
+ },
+ {
+  "name": "Andhra Pradesh",
+  "freq": 6
+ },
+ {
+  "name": "Linga Reddy",
+  "freq": 6
+ },
+ {
+  "name": "Narasimha Reddy",
+  "freq": 6
+ },
+ {
+  "name": "Provincial Committee",
+  "freq": 6
+ },
+ {
+  "name": "Raghavendra Rao",
+  "freq": 6
+ },
+ {
+  "name": "Rami Reddy",
+  "freq": 6
+ },
+ {
+  "name": "Andhra Prabha",
+  "freq": 5
+ },
+ {
+  "name": "Comrade B",
+  "freq": 5
+ },
+ {
+  "name": "Comrade Ramulu",
+  "freq": 5
+ },
+ {
+  "name": "Comrade Sitarama Rao",
+  "freq": 5
+ },
+ {
+  "name": "Congress Seva Dal",
+  "freq": 5
+ },
+ {
+  "name": "Gopal Reddy",
+  "freq": 5
+ },
+ {
+  "name": "India’s",
+  "freq": 5
+ },
+ {
+  "name": "Kisan Sabha",
+  "freq": 5
+ },
+ {
+  "name": "People’s Democracy",
+  "freq": 5
+ },
+ {
+  "name": "People’s Democratic Front",
+  "freq": 5
+ },
+ {
+  "name": "Rajeshwar Rao",
+  "freq": 5
+ },
+ {
+  "name": "Ravi Narayan Reddy’s",
+  "freq": 5
+ },
+ {
+  "name": "Right Communist Party",
+  "freq": 5
+ },
+ {
+  "name": "Second Party Congress",
+  "freq": 5
+ },
+ {
+  "name": "Working Committee",
+  "freq": 5
+ },
+ {
+  "name": "Briggs Plan",
+  "freq": 4
+ },
+ {
+  "name": "City College",
+  "freq": 4
+ },
+ {
+  "name": "Comrade Kodanda Rami Reddy",
+  "freq": 4
+ },
+ {
+  "name": "Comrade Kondalreddi",
+  "freq": 4
+ },
+ {
+  "name": "Comrade Mukundam",
+  "freq": 4
+ },
+ {
+  "name": "Comrade P",
+  "freq": 4
+ },
+ {
+  "name": "Comrade Seetaramayya",
+  "freq": 4
+ },
+ {
+  "name": "Comrade Seetharamayya",
+  "freq": 4
+ },
+ {
+  "name": "Comrade Srinivasa Rao",
+  "freq": 4
+ },
+ {
+  "name": "Damodar Reddy",
+  "freq": 4
+ },
+ {
+  "name": "General J",
+  "freq": 4
+ },
+ {
+  "name": "Godavari River",
+  "freq": 4
+ },
+ {
+  "name": "Kasim Razvi",
+  "freq": 4
+ },
+ {
+  "name": "Khammam Cage",
+  "freq": 4
+ },
+ {
+  "name": "Madhava Reddy",
+  "freq": 4
+ },
+ {
+  "name": "Panch Committees",
+  "freq": 4
+ },
+ {
+  "name": "Prabhakar Rao",
+  "freq": 4
+ },
+ {
+  "name": "Rajeswar Rao",
+  "freq": 4
+ },
+ {
+  "name": "Andhra Provincial Committee",
+  "freq": 3
+ },
+ {
+  "name": "Andhra Secretariat",
+  "freq": 3
+ },
+ {
+  "name": "Azad Hyderabad",
+  "freq": 3
+ },
+ {
+  "name": "City Committee",
+  "freq": 3
+ },
+ {
+  "name": "City Textiles",
+  "freq": 3
+ },
+ {
+  "name": "Comrade Basaviah",
+  "freq": 3
+ },
+ {
+  "name": "Comrade Bhupati Reddy",
+  "freq": 3
+ },
+ {
+  "name": "Comrade Hanumayya",
+  "freq": 3
+ },
+ {
+  "name": "Comrade Jagannadham",
+  "freq": 3
+ },
+ {
+  "name": "Comrade M",
+  "freq": 3
+ },
+ {
+  "name": "Comrade Madhava Reddy",
+  "freq": 3
+ },
+ {
+  "name": "Comrade Soyam Gangulu",
+  "freq": 3
+ },
+ {
+  "name": "Comrade Tirumala Reddy",
+  "freq": 3
+ },
+ {
+  "name": "Comrade Yadagiri",
+  "freq": 3
+ },
+ {
+  "name": "Congress Ministries",
+  "freq": 3
+ },
+ {
+  "name": "Cuddalore Jail",
+  "freq": 3
+ },
+ {
+  "name": "Democratic Youth",
+  "freq": 3
+ },
+ {
+  "name": "Deshmukh’s",
+  "freq": 3
+ },
+ {
+  "name": "Doddi Komarayya",
+  "freq": 3
+ },
+ {
+  "name": "Ella Reddy",
+  "freq": 3
+ },
+ {
+  "name": "General Secretary",
+  "freq": 3
+ },
+ {
+  "name": "Ginjaluri Pitchayya",
+  "freq": 3
+ },
+ {
+  "name": "Gram Committees",
+  "freq": 3
+ },
+ {
+  "name": "Gram Raj Committees",
+  "freq": 3
+ },
+ {
+  "name": "Hitler’s",
+  "freq": 3
+ },
+ {
+  "name": "Home Guard",
+  "freq": 3
+ },
+ {
+  "name": "Hyderabad City",
+  "freq": 3
+ },
+ {
+  "name": "Indian National Army",
+  "freq": 3
+ },
+ {
+  "name": "Jannareddy Pratap Reddy",
+  "freq": 3
+ },
+ {
+  "name": "Kilaru Venkayya",
+  "freq": 3
+ },
+ {
+  "name": "Kummari Muttayya",
+  "freq": 3
+ },
+ {
+  "name": "Majlis Ittehad-ul-Muslimeen",
+  "freq": 3
+ },
+ {
+  "name": "Military Governor",
+  "freq": 3
+ },
+ {
+  "name": "Munagala Pargana",
+  "freq": 3
+ },
+ {
+  "name": "Nizam’s College",
+  "freq": 3
+ },
+ {
+  "name": "Party Headquarters",
+  "freq": 3
+ },
+ {
+  "name": "People’s",
+  "freq": 3
+ },
+ {
+  "name": "Potluru Sundaram",
+  "freq": 3
+ },
+ {
+  "name": "Pusukuri Raghavarao",
+  "freq": 3
+ },
+ {
+  "name": "Qasim Aziz",
+  "freq": 3
+ },
+ {
+  "name": "River Krishna",
+  "freq": 3
+ },
+ {
+  "name": "Russian Revolution",
+  "freq": 3
+ },
+ {
+  "name": "Sri A",
+  "freq": 3
+ },
+ {
+  "name": "Supreme Court",
+  "freq": 3
+ },
+ {
+  "name": "Telangana People’s Struggle",
+  "freq": 3
+ },
+ {
+  "name": "Ummineni Ramayya",
+  "freq": 3
+ },
+ {
+  "name": "Vallabhbhai Patel",
+  "freq": 3
+ },
+ {
+  "name": "Visnur Ramachandra Reddy",
+  "freq": 3
+ },
+ {
+  "name": "World Federation",
+  "freq": 3
+ }
+]
