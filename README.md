@@ -1,7 +1,7 @@
 # Telangana People's Struggle — an interactive archive
 
 An interactive edition of P. Sundarayya's *Telangana People's Struggle and Its Lessons*
-(CPI(M), Calcutta, December 1972). [Source PDF](https://www.revolutionarydemocracy.org/archive/Telangana.pdf), 414 pages.
+(CPI(M), Calcutta, December 1972), 414 pages.
 
 **What's inside**
 
@@ -30,7 +30,7 @@ BASE_PATH=/ npm run build   # build for a site served at the domain root
 The JSON in `public/data/` is generated, not hand-edited:
 
 ```bash
-curl -LO https://www.revolutionarydemocracy.org/archive/Telangana.pdf
+# Telangana.pdf = the 414-page source PDF of the 1972 edition
 python3 scripts/build_data.py Telangana.pdf      # needs poppler-utils (pdftotext) + numpy
 scripts/build_maps.sh telangana-full.geojson ap-full.geojson   # optional: district polygons
 ```
@@ -39,6 +39,8 @@ scripts/build_maps.sh telangana-full.geojson ap-full.geojson   # optional: distr
 - `scripts/curated.py` holds the timeline events, eras, figures, people, glossary and themes. Each item is anchored to an exact phrase in the book, and the build **fails** if a phrase can't be found.
 - `scripts/gazetteer.py` holds the places with approximate coordinates and the book's spellings.
 - `scripts/zones.py` holds the georeferencing control points and traced zones of the 1948 map.
+
+The site's link to the source PDF is set by `PDF_URL` in `src/lib/data.js` (currently empty, so no PDF links are shown).
 
 ## Deploy (GitHub Pages)
 

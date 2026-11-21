@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 
 export const BASE = import.meta.env.BASE_URL;
-export const PDF_URL = "https://www.revolutionarydemocracy.org/archive/Telangana.pdf";
-export const pdfPage = (n) => `${PDF_URL}#page=${n}`;
+// Link to the source PDF. Left empty for now: page numbers render as plain text
+// and "Original PDF" links are hidden until a URL is set here.
+export const PDF_URL = "";
+export const pdfPage = (n) => (PDF_URL ? `${PDF_URL}#page=${n}` : null);
 export const asset = (p) => `${BASE}${p.replace(/^\//, "")}`;
 
 const cache = new Map();

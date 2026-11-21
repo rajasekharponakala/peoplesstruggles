@@ -82,7 +82,7 @@ export function Footer() {
         </div>
         <div>
           <h4>Source</h4>
-          <a href={PDF_URL} target="_blank" rel="noreferrer">Original PDF (414 pages) ↗</a>
+          {PDF_URL && <a href={PDF_URL} target="_blank" rel="noreferrer">Original PDF (414 pages) ↗</a>}
           <Link to="/insights">Data & method</Link>
           <Link to="/glossary">Glossary of terms</Link>
           <Link to="/search">Full-text search</Link>

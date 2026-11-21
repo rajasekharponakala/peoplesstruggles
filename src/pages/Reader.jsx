@@ -204,7 +204,7 @@ export default function Reader() {
                   </div>
                 )}
               </div>
-              <a className="btn ghost sm" href={pdfPage(ch.pages[0])} target="_blank" rel="noreferrer"><Icon name="ext" size={15} /> Original PDF</a>
+              {pdfPage(ch.pages[0]) && <a className="btn ghost sm" href={pdfPage(ch.pages[0])} target="_blank" rel="noreferrer"><Icon name="ext" size={15} /> Original PDF</a>}
               {q && <span className="tag" style={{ background: "var(--mark)" }}>Highlighting “{q}” <Link to={`/read/${id}`} aria-label="Clear highlight">✕</Link></span>}
             </div>
           </header>
@@ -229,7 +229,7 @@ export default function Reader() {
                 }
                 return (
                   <div key={b.id} id={`b-${b.id}`} data-sec={sketch ? b.id : undefined} className={`blk ${b.t} ${i === firstP ? "lead" : ""}`}>
-                    {pg && <span className="pg"><a href={pdfPage(pg)} target="_blank" rel="noreferrer" title="Open this page of the original PDF">p. {pg}</a></span>}
+                    {pg && <span className="pg">{pdfPage(pg) ? <a href={pdfPage(pg)} target="_blank" rel="noreferrer" title="Open this page of the original PDF">p. {pg}</a> : `p. ${pg}`}</span>}
                     {notes && (
                       <div className="margin-notes">
                         {notes.map((n) => n.kind === "event" ? (

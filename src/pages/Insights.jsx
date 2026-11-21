@@ -97,7 +97,7 @@ export default function Insights() {
           <div className="card pad-lg">
             <h3 style={{ fontSize: 22 }}>How this archive was built</h3>
             <ul style={{ lineHeight: 1.7, color: "var(--ink-2)" }}>
-              <li>The text comes from the <a href={PDF_URL} target="_blank" rel="noreferrer">414-page PDF</a> of the 1972 edition. Chapter boundaries, headings and paragraphs broken across pages were repaired, and each paragraph is matched to its PDF page.</li>
+              <li>The text comes from the {PDF_URL ? <a href={PDF_URL} target="_blank" rel="noreferrer">414-page PDF</a> : "414-page PDF"} of the 1972 edition. Chapter boundaries, headings and paragraphs broken across pages were repaired, and each paragraph is matched to its PDF page.</li>
               <li>Appendix I (Martyrs) was parsed from the PDF's column layout into {`>`}1,000 structured rows. Ditto marks were expanded and dates were pulled from the remarks.</li>
               <li>The 49 timeline events, 14 figures, 19 key people and the glossary were curated by hand. Each is anchored to an exact sentence in the book, and the build fails if the sentence cannot be found.</li>
               <li>The 1948 movement map from p. 2 was georeferenced with an affine fit on nine towns (residual about 0.05°). Its zones and arrows were traced by hand, so they are approximate.</li>

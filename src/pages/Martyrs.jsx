@@ -48,7 +48,7 @@ export function MartyrTable({ rows, q, atlas, limit = 2000 }) {
         </td>
         <td>{vp ? <Link to={`/map?place=${vp}`}>{highlight(e.village, q)}</Link> : highlight(e.village, q)}</td>
         <td>{highlight(e.remarks, q)}</td>
-        <td className="num"><a href={pdfPage(e.page)} target="_blank" rel="noreferrer" title="Open source page">p. {e.page}</a>{e.date ? <div className="tiny">{e.date.split("-").reverse().join(".")}</div> : null}</td>
+        <td className="num">{pdfPage(e.page) ? <a href={pdfPage(e.page)} target="_blank" rel="noreferrer" title="Open source page">p. {e.page}</a> : <span title="Page in the 1972 edition">p. {e.page}</span>}{e.date ? <div className="tiny">{e.date.split("-").reverse().join(".")}</div> : null}</td>
       </tr>
     );
   });
