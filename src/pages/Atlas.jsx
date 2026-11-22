@@ -6,6 +6,7 @@ import "leaflet/dist/leaflet.css";
 import Icon from "../components/Icons";
 import { Loading } from "../components/Layout";
 import { HBars } from "../components/Viz";
+import PlaceQuiz from "../components/PlaceQuiz";
 import { asset, fmtNum, readLink, useAtlas, useBook, useMartyrs } from "../lib/data";
 import { snippet } from "../lib/text";
 
@@ -266,6 +267,7 @@ export default function Atlas() {
               <h4 className="panel-title">Most-mentioned places</h4>
               <HBars items={[...visiblePlaces].sort((a, b) => b.total - a.total).slice(0, 12).map((p) => ({ label: p.name, value: p.total, color: TYPE_COLOR[p.type] }))} />
               <p className="tiny muted" style={{ marginTop: 16 }}>Place coordinates are modern and approximate, matched to the book's spellings (Illendu = Yellandu, Manukota = Mahabubabad, Bezwada = Vijayawada). Zones are hand-traced from the scanned map.</p>
+              <PlaceQuiz atlas={atlas} />
             </>
           )}
 

@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import EventQuiz from "../components/EventQuiz";
 import Icon from "../components/Icons";
 import { Loading, PageHead } from "../components/Layout";
 import MiniMap from "../components/MiniMap";
@@ -183,6 +184,7 @@ export default function Timeline() {
                 <button className="btn sm" onClick={() => select(events[0].id)}>Start from the beginning <Icon name="arrow" size={14} /></button>
               </div>
             )}
+            <EventQuiz atlas={atlas} />
           </aside>
         </div>
       </div>

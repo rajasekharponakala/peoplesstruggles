@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Loading, PageHead } from "../components/Layout";
+import PeopleQuiz from "../components/PeopleQuiz";
 import { initials, Spark } from "../components/Viz";
 import { readLink, useAtlas } from "../lib/data";
 
@@ -74,6 +75,13 @@ export default function People() {
               </div>
             </div>
           ))}
+        </section>
+
+        <section className="section tight" id="quiz">
+          <div className="section-title">
+            <div><div className="eyebrow">Quiz</div><h2>Name the fighters</h2><p>Name the key people of the struggle. Each shows a figure from the book — you pick the name.</p></div>
+          </div>
+          <PeopleQuiz atlas={atlas} />
         </section>
       </div>
     </>

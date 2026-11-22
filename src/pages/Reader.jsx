@@ -147,7 +147,7 @@ export default function Reader() {
 
   return (
     <>
-      <div className="progress-bar" style={{ width: `${progress}%` }} />
+      <div className="progress-bar" role="progressbar" aria-valuenow={Math.round(progress)} aria-valuemin={0} aria-valuemax={100} style={{ width: `${progress}%` }} />
       <div className="reader">
         <aside className={`reader-toc ${tocOpen ? "open" : ""}`} aria-label="Contents">
           <div className="toc-chapters">
