@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import EventQuiz from "../components/EventQuiz";
 import Icon from "../components/Icons";
 import { Loading, PageHead } from "../components/Layout";
 import MiniMap from "../components/MiniMap";
@@ -185,6 +186,7 @@ export default function Timeline() {
             )}
           </aside>
         </div>
+        <EventQuiz atlas={atlas} />
       </div>
     </>
   );
