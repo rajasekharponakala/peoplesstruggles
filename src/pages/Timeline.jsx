@@ -184,9 +184,9 @@ export default function Timeline() {
                 <button className="btn sm" onClick={() => select(events[0].id)}>Start from the beginning <Icon name="arrow" size={14} /></button>
               </div>
             )}
-            <EventQuiz atlas={atlas} />
           </aside>
         </div>
+        <EventQuiz atlas={atlas} />
       </div>
     </>
   );

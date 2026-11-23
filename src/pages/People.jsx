@@ -79,7 +79,7 @@ export default function People() {
 
         <section className="section tight" id="quiz">
           <div className="section-title">
-            <div><div className="eyebrow">Quiz</div><h2>Name the fighters</h2><p>Name the key people of the struggle. Each shows a figure from the book — you pick the name.</p></div>
+            <div><div className="eyebrow">Quiz</div><h2>Name the historical figures</h2><p>Read a biographical clue and choose the person it describes.</p></div>
           </div>
           <PeopleQuiz atlas={atlas} />
         </section>
